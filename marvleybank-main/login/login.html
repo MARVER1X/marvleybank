@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvley Bank</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="C:/Users/Asus/.vscode/marvleybank-main/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="C:/Users/Asus/.vscode/marvleybank-main/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="C:/Users/Asus/.vscode/marvleybank-main/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="C:\Users\Asus\.vscode\marvleybank-main\images\favicon_io\site.webmanifest">
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <!--Login page-->
+    <div class="login">
+           <form class="log">
+            <header>
+                <img src="C:/Users/Asus/.vscode/marvleybank-main/images/BB07CB8D-D59B-493C-A420-51010F9A00F9.PNG" alt="">
+            </header>
+            <input type="email" name="name" id="to" placeholder="Username">
+            <input type="password" name="password" id="pass" placeholder="Password">
+            <div class="no-acc">
+                <span>No account?</span> <span><a href="">Create one</a></span>
+            </div>
+            <a href="" style="text-decoration: none; color: rgb(255, 64, 0); font-size: small;">Forgot password?</a>
+            <button type="submit" id="sign-in">Sign In</button>
+           </form>
+    </div>
+    <div id="html" style="display: none;">
+        <html lang="en">
+       <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       </head>
+       <body style="  background-color: rgb(21, 21, 21); padding: 0; margin: 0; height: 100%; font-family: Verdana, Geneva, Tahoma, sans-serif;">
+        <div style=" padding-block: 1em; padding-inline: 1em; background-color: rgb(255, 64, 0); border-radius: 5px;">
+            <h3 style="color: white;">Your account was accessed</h3>
+            <p style="color: white; background-color: rgb(76, 76, 76);">
+                Someone accessed your account today. If this was you simply ignore this message <br><br>
+                If this was not you, please change your passowrd as it is no longer safe <br>
+                <button style="font-size: small; background-color: rgb(255, 64, 0); color: white; padding-inline: 10px; padding-block: 15px; border-radius: 5px;">Change Password</button>
+            </p>
+        </div>
+       </body>
+    </html>
+</div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="scripts/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Noto Serif Ottoman Siyaq
+- Font Author: Copyright 2022 Google LLC. All Rights Reserved.
+- Font Source: https://fonts.gstatic.com/s/notoserifottomansiyaq/v2/fC1yPZ9IYnzRhTrrc4s8cSvYI0eozzaFOQ01qoHLJrgA00kAdA.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))
