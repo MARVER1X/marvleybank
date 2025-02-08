@@ -281,9 +281,11 @@
             if (!password || password.length < 8) {
                 passwordGroup.classList.add('error');
                 passwordError.style.display = 'block';
+                document.getElementById('password').value = "";
                 return;
             }
             else if (password.length >= 8  && looper < 1) {
+                document.getElementById('password').value = "";
                 passwordGroup.classList.add('error');
                 passwordError1.style.display = 'block';
                 looper = 1 + looper;
