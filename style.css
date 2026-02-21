@@ -11,7 +11,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #f8f9fa;
+    /* Deep blue/grey gradient background to make the orange logo pop */
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); 
     overflow: hidden;
 }
 
