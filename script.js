@@ -42,7 +42,7 @@ document.getElementById('nameForm').addEventListener('submit', function(e) {
     // Send to Google Sheets Webhook
     let textPayload = `New Waitlist Entry - Name: ${userName} | Email: ${userEmail}`;
     
-    fetch("https://script.google.com/macros/s/AKfycbytQmeG_XobuM7zlWxitdUy_NlMm9TTgkd8QCJYvQZ5xc5bTIE7i-V4o2DWfUvNMAxp/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbz2qVHeV_wNI9R6v4J8YdeDEB38DSLxXbeIaJKwTJ8ulNu6sV_1ehhMvCyK2UJVst6XyQ/exec", {
         mode: 'no-cors', 
         method: "POST",
         headers: { "Content-Type": "application/json" },
