@@ -1,33 +1,47 @@
+/* ! GLOBAL DESIGN SYSTEM & RESET
+ * Standardizing box model and cross-platform typography
+ */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* Using a robust font stack for system-native rendering */
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* ! VIEWPORT ARCHITECTURE
+ * Centering the application shell within the browser window
+ */
 body {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* Deep blue/grey gradient background to make the orange logo pop */
+    /* Deep blue/grey gradient background to make the orange brand color pop */
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); 
     overflow: hidden;
 }
 
+/* ! BRAND IDENTITY (Logo)
+ */
 .cLogo {
     text-align: center;
     font-size: larger;
     color: rgb(255, 115, 0);
-    padding: 0; margin: 0;
+    padding: 0; 
+    margin: 0;
     font-weight: bold;
 }
 
 .cLogo img {
-    padding: 0; margin: 0;
+    padding: 0; 
+    margin: 0;
 }
 
+/* ! COMPONENT: FORM CONTAINER
+ * Modern card-based UI with subtle depth and containment
+ */
 .form-container {
     width: 100%;
     max-width: 448px;
@@ -35,9 +49,11 @@ body {
     padding: 48px 40px 36px;
     border: 1px solid #dadce0;
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
+/* ! TEXTUAL HIERARCHY
+ */
 h1 {
     color: #202124;
     font-size: 24px;
@@ -53,6 +69,9 @@ h1 {
     margin-bottom: 32px;
 }
 
+/* ! INTERACTIVE INPUT SYSTEM
+ * Implements "Floating Label" pattern for modern UX
+ */
 .form-group {
     position: relative;
     margin-bottom: 24px;
@@ -71,6 +90,7 @@ h1 {
     transition: border-color 0.15s ease;
 }
 
+/* Base state for the floating label */
 .label {
     position: absolute;
     left: 15px;
@@ -84,6 +104,7 @@ h1 {
     background: white;
 }
 
+/* Active State: Label moves up on focus or when input has content */
 .input-field:focus {
     border-color: rgb(255, 115, 0);
     border-width: 2px;
@@ -97,6 +118,8 @@ h1 {
     color: rgb(255, 115, 0);
 }
 
+/* ! VALIDATION & ERROR FEEDBACK
+ */
 .error .input-field {
     border-color: #d93025;
 }
@@ -112,6 +135,8 @@ h1 {
     display: none;
 }
 
+/* ! CALL TO ACTION (Button)
+ */
 .btn {
     background-color: rgb(255, 115, 0);
     color: white;
@@ -131,6 +156,9 @@ h1 {
     background-color: rgb(220, 95, 0);
 }
 
+/* ! STATE-DRIVEN DISPLAY LOGIC
+ * Controlled via JavaScript for multi-step authentication flow
+ */
 #nameSection, #after {
     display: none;
 }
